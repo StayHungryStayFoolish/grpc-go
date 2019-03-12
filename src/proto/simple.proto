@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "io.stayhungrystayfoolish.github.grpcjava.grpc";
+option go_package = "io.stayhungrystayfoolish.github.grpcgo";
+
+service Simple {
+    rpc SayHello(HelloRequest) returns (HelloReplay) {};
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloReplay {
+    string message = 1;
+}
